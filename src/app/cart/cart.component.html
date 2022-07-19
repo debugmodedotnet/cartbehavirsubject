@@ -1,0 +1,27 @@
+
+
+
+<div class="row">
+    <h3>Your Cart</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of Carts">
+                   <td>{{p.Id}}</td>
+                   <td>{{p.Title}}</td>
+                   <td>{{p.Price}}</td>
+                   <td>{{p.Qunatity}}</td>
+                   <td><button (click)="RemoveFromCart(p)" class="btn btn-danger">Remove from Cart</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
